@@ -1,0 +1,232 @@
+[
+  {
+    "Hoops": [
+      {
+        "nombre": "Hoops Inti",
+        "precio": "24.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en oro",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Argollas Inti"
+      },
+      {
+        "nombre": "Hoops Julieta",
+        "precio": "24.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en rose gold",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Argollas Julieta"
+      },
+      {
+        "nombre": "Cielo",
+        "precio": "18.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en oro",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Cielo"
+      },
+      {
+        "nombre": "Hoops Adara",
+        "precio": "18.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en rose gold",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Adara"
+      },
+      {
+        "nombre": "Hoops Aisha",
+        "precio": "29.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en oro",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Aisha"
+      },
+      {
+        "nombre": "Hoops Aitana",
+        "precio": "21.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en rose gold",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Aitana"
+      },
+      {
+        "nombre": "Hoops Alexandra",
+        "precio": "21.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en oro",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Alexandra"
+      },
+      {
+        "nombre": "Hoops Alyssa",
+        "precio": "24.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en oro",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Alyssa"
+      },
+      {
+        "nombre": "Hoops Amore",
+        "precio": "16.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en oro",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Amore"
+      },
+      {
+        "nombre": "Hoops Bri",
+        "precio": "29.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en oro con predreria",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Bri"
+      },
+      {
+        "nombre": "Hoops Canoa",
+        "precio": "18.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en oro",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Canoa"
+      },
+      {
+        "nombre": "Hoops Caro",
+        "precio": "18.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en oro",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops caro"
+      },
+      {
+        "nombre": "Hoops Celeste",
+        "precio": "24.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en oro",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Celeste"
+      },
+      {
+        "nombre": "Hoops Estrella",
+        "precio": "19.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en oro",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Estrella"
+      },
+      {
+        "nombre": "Hoops Ivana",
+        "precio": "21.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en oro",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Ivana"
+      },
+      {
+        "nombre": "Hoops Laurel",
+        "precio": "19.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en oro",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops laurel"
+      },
+      {
+        "nombre": "Hoops Luz",
+        "precio": "22.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en rose gold",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Luz"
+      },
+      {
+        "nombre": "Hoops Margot",
+        "precio": "27.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en oro",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Margot"
+      },
+      {
+        "nombre": "Hoops Maya",
+        "precio": "18.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en oro",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Maya"
+      },
+      {
+        "nombre": "Hoops Micaela",
+        "precio": "29.90",
+        "material": "Cobre-otros",
+        "descripcion": "Rose gold enchapado en 14k",
+        "product": "Hoops Micaela"
+      },
+      {
+        "nombre": "Hoops Mila",
+        "precio": "22.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en oro",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Mila"
+      },
+      {
+        "nombre": "Hoops Neley",
+        "precio": "19.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en oro",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Neley"
+      },
+      {
+        "nombre": "Hoops Rainbow L",
+        "precio": "24.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en oro",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Rainbow L"
+      },
+      {
+        "nombre": "Hoops Sadie",
+        "precio": "24.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en rose gold",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Sadie"
+      },
+      {
+        "nombre": "Hoops Sandra",
+        "precio": "21.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en rose gold",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Sandra"
+      },
+      {
+        "nombre": "Hoops Tani",
+        "precio": "15.90",
+        "material": "Cobre-otros",
+        "descripcion": "Rose gold enchapado en 14k",
+        "product": "Hoops Tani"
+      },
+      {
+        "nombre": "Hoops Tiana",
+        "precio": "24.90",
+        "material": "Cobre-otros",
+        "descripcion": "enchapado en rose gold",
+        "hipoalergenicas": "No irritan tu piel",
+        "product": "Hoops Tiana"
+      },
+      {
+        "nombre": "Hoops Marina",
+        "material": "Cobre-otros",
+        "diametro": "1",
+        "product": "Marina Hoops"
+      },
+      {
+        "nombre": "Mini Brenda",
+        "material": "Cobre-otros",
+        "descripcion": "Enchapado en oro",
+        "product": "Mini brenda"
+      }
+    ]
+  }
+]
