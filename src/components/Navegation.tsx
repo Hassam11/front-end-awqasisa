@@ -1,6 +1,27 @@
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import CartShop from "./CartShop"; // Importa el componente CartShop
+import DropMenuPerson from "./DropMenuPerson";
+import IconLogin from "./IconLogin";
 
 export default function Navegation() {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [loginSet, setLoginSet] = useState(true);
+  useEffect(() => {
+    const email = localStorage.getItem("email");
+    const password = localStorage.getItem("password");
+
+    if (email && password) {
+      setLoginSet(true);
+    } else {
+      setLoginSet(false);
+    }
+  }, []);
+
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
   return (
     <nav id="header" className="w-full z-30 top-0 py-1">
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3">
@@ -63,25 +84,10 @@ export default function Navegation() {
         </div>
 
         <div className="order-2 md:order-3 flex items-center" id="nav-content">
-          <Link
-            className="inline-block no-underline hover:text-black"
-            to="/login"
-          >
-            <svg
-              className="fill-current hover:text-black"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <circle fill="none" cx="12" cy="7" r="3" />
-              <path d="M12 2C9.243 2 7 4.243 7 7s2.243 5 5 5 5-2.243 5-5S14.757 2 12 2zM12 10c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3S13.654 10 12 10zM21 21v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h2v-1c0-2.757 2.243-5 5-5h4c2.757 0 5 2.243 5 5v1H21z" />
-            </svg>
-          </Link>
-
-          <Link
+          {loginSet ? <DropMenuPerson /> : <IconLogin />}
+          <button
             className="pl-3 inline-block no-underline hover:text-black"
-            to="/"
+            onClick={toggleCart}
           >
             <svg
               className="fill-current hover:text-black"
@@ -94,9 +100,15 @@ export default function Navegation() {
               <circle cx="10.5" cy="18.5" r="1.5" />
               <circle cx="17.5" cy="18.5" r="1.5" />
             </svg>
-          </Link>
+          </button>
         </div>
       </div>
+
+      {isCartOpen && (
+        <div className="absolute right-4 mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-lg">
+          <CartShop />
+        </div>
+      )}
     </nav>
   );
 }

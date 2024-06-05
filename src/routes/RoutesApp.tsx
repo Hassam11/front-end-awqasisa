@@ -5,6 +5,8 @@ import HomePage from "../pages/HomePage";
 import About from "../pages/AboutPage";
 import CartShop from "../components/CartShop";
 import CheckoutPage from "../pages/CheckoutPage";
+import MainPage from "../pages/MainPage";
+import PerfilPage from "../pages/PerfilPage";
 
 export const routerApp = createBrowserRouter([
   {
@@ -18,6 +20,7 @@ export const routerApp = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+    // element: <MainPage />,
   },
   {
     path: "/sobre-nosotros",
@@ -30,5 +33,9 @@ export const routerApp = createBrowserRouter([
   {
     path: "/CheckoutPage",
     element: <CheckoutPage />,
+  },
+  {
+    path: "/perfil",
+    element: <PerfilPage />,
   },
 ]);
