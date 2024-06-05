@@ -9,6 +9,7 @@ import {
   Td,
   Button,
   Input,
+  Heading,
 } from "@chakra-ui/react";
 import DashboardNavigation from "../../components/DashboardNavigation";
 
@@ -21,8 +22,7 @@ export default function ClientesPage() {
       email: "juan@gmail.com",
       telefono: "999-999-999",
       compras: 3,
-      direccion: "Calle Principal #123, Ciudad",
-      saldo: "$500",
+      direccion: "Avenida - Calle, Ciudad",
       notas: "Cliente preferente",
       comprando: false,
     },
@@ -32,8 +32,7 @@ export default function ClientesPage() {
       email: "maria@gmail.com",
       telefono: "999-999-999",
       compras: 5,
-      direccion: "Avenida Central #456, Ciudad",
-      saldo: "$1000",
+      direccion: "Avenida - Calle, Ciudad",
       notas: "Ninguna",
       comprando: true,
     },
@@ -43,8 +42,7 @@ export default function ClientesPage() {
       email: "carlos@gmail.com",
       telefono: "999-999-999",
       compras: 2,
-      direccion: "Calle Secundaria #789, Ciudad",
-      saldo: "$200",
+      direccion: "Avenida - Calle, Ciudad",
       notas: "Pago pendiente",
       comprando: false,
     },
@@ -54,8 +52,7 @@ export default function ClientesPage() {
       email: "ana@gmail.com",
       telefono: "999-999-999",
       compras: 4,
-      direccion: "Avenida Principal #123, Ciudad",
-      saldo: "$600",
+      direccion: "Avenida - Calle, Ciudad",
       notas: "Cliente nuevo",
       comprando: true,
     },
@@ -65,8 +62,7 @@ export default function ClientesPage() {
       email: "diego@gmail.com",
       telefono: "999-999-999",
       compras: 7,
-      direccion: "Calle Central #456, Ciudad",
-      saldo: "$800",
+      direccion: "Avenida - Calle, Ciudad",
       notas: "Cliente frecuente",
       comprando: false,
     },
@@ -76,8 +72,7 @@ export default function ClientesPage() {
       email: "laura@gmail.com",
       telefono: "999-999-999",
       compras: 2,
-      direccion: "Avenida Secundaria #789, Ciudad",
-      saldo: "$300",
+      direccion: "Avenida - Calle, Ciudad",
       notas: "Cliente preferente",
       comprando: true,
     },
@@ -87,8 +82,7 @@ export default function ClientesPage() {
       email: "pedro@gmail.com",
       telefono: "999-999-999",
       compras: 5,
-      direccion: "Calle Principal #1011, Ciudad",
-      saldo: "$1000",
+      direccion: "Avenida - Calle, Ciudad",
       notas: "Cliente nuevo",
       comprando: false,
     },
@@ -98,8 +92,7 @@ export default function ClientesPage() {
       email: "maria@gmail.com",
       telefono: "999-999-999",
       compras: 3,
-      direccion: "Avenida Central #1213, Ciudad",
-      saldo: "$400",
+      direccion: "Avenida - Calle, Ciudad",
       notas: "Cliente frecuente",
       comprando: true,
     },
@@ -109,8 +102,7 @@ export default function ClientesPage() {
       email: "carlos@gmail.com",
       telefono: "999-999-999",
       compras: 6,
-      direccion: "Calle Principal #1415, Ciudad",
-      saldo: "$700",
+      direccion: "Avenida - Calle, Ciudad",
       notas: "Cliente nuevo",
       comprando: false,
     },
@@ -120,8 +112,7 @@ export default function ClientesPage() {
       email: "lucia@gmail.com",
       telefono: "999-999-999",
       compras: 1,
-      direccion: "Avenida Secundaria #1617, Ciudad",
-      saldo: "$200",
+      direccion: "Avenida - Calle, Ciudad",
       notas: "Cliente preferente",
       comprando: true,
     },
@@ -131,8 +122,7 @@ export default function ClientesPage() {
       email: "pablo@gmail.com",
       telefono: "999-999-999",
       compras: 8,
-      direccion: "Calle Central #1819, Ciudad",
-      saldo: "$900",
+      direccion: "Avenida - Calle, Ciudad",
       notas: "Cliente frecuente",
       comprando: false,
     },
@@ -142,8 +132,7 @@ export default function ClientesPage() {
       email: "sofia@gmail.com",
       telefono: "999-999-999",
       compras: 2,
-      direccion: "Avenida Principal #2021, Ciudad",
-      saldo: "$250",
+      direccion: "Avenida - Calle, Ciudad",
       notas: "Cliente nuevo",
       comprando: true,
     },
@@ -153,8 +142,7 @@ export default function ClientesPage() {
       email: "alejandro@gmail.com",
       telefono: "999-999-999",
       compras: 5,
-      direccion: "Calle Principal #2223, Ciudad",
-      saldo: "$600",
+      direccion: "Avenida - Calle, Ciudad",
       notas: "Cliente preferente",
       comprando: false,
     },
@@ -169,57 +157,55 @@ export default function ClientesPage() {
   );
 
   return (
-    <Flex h="100%">
+    <Flex h="100vh">
       {/* Sidebar */}
       <DashboardNavigation />
       {/* Content Area */}
-      <Flex flex="1" p="10" ml="64" direction="column">
-        <h1 className="text-3xl font-semibold mb-8">Panel de Clientes</h1>
+      <Flex flex="1" p="10" ml="64" direction="column" bg="gray.50">
+        <Heading as="h1" size="lg" mb="8">
+          Panel de Clientes
+        </Heading>
         <Input
           placeholder="Buscar cliente"
           value={searchTerm}
           onChange={handleSearch}
           mb="4"
+          size="lg"
+          bg="white"
+          borderColor="gray.300"
+          _hover={{ borderColor: "gray.400" }}
         />
         <Flex overflowX="auto">
-          <Table variant="simple">
+          <Table variant="striped" colorScheme="gray">
             <Thead>
-              <Tr
-                bgColor="gray.200"
-                color="gray.600"
-                fontSize="sm"
-                fontWeight="medium"
-              >
-                <Th py="3" px="6">
+              <Tr>
+                <Th py="4" px="6">
                   Nombre
                 </Th>
-                <Th py="3" px="6">
+                <Th py="4" px="6">
                   Email
                 </Th>
-                <Th py="3" px="6">
+                <Th py="4" px="6">
                   Teléfono
                 </Th>
-                <Th py="3" px="6">
+                <Th py="4" px="6">
                   Compras realizadas
                 </Th>
-                <Th py="3" px="6">
+                <Th py="4" px="6">
                   Dirección
                 </Th>
-                <Th py="3" px="6">
-                  Saldo
-                </Th>
-                <Th py="3" px="6">
+                <Th py="4" px="6">
                   Notas
                 </Th>
-                <Th py="3" px="6">
+                <Th py="4" px="6">
                   Comprando
                 </Th>
-                <Th py="3" px="6">
+                <Th py="4" px="6">
                   Acciones
                 </Th>
               </Tr>
             </Thead>
-            <Tbody className="text-gray-600 text-sm font-light">
+            <Tbody>
               {filteredClientes.map((cliente) => (
                 <Tr
                   key={cliente.id}
@@ -227,31 +213,28 @@ export default function ClientesPage() {
                   borderBottom="1px"
                   borderColor="gray.200"
                 >
-                  <Td py="3" px="6">
+                  <Td py="4" px="6">
                     {cliente.nombre}
                   </Td>
-                  <Td py="3" px="6">
+                  <Td py="4" px="6">
                     {cliente.email}
                   </Td>
-                  <Td py="3" px="6">
+                  <Td py="4" px="6">
                     {cliente.telefono}
                   </Td>
-                  <Td py="3" px="6">
+                  <Td py="4" px="6">
                     {cliente.compras}
                   </Td>
-                  <Td py="3" px="6">
+                  <Td py="4" px="6">
                     {cliente.direccion}
                   </Td>
-                  <Td py="3" px="6">
-                    {cliente.saldo}
-                  </Td>
-                  <Td py="3" px="6">
+                  <Td py="4" px="6">
                     {cliente.notas}
                   </Td>
-                  <Td py="3" px="6">
+                  <Td py="4" px="6">
                     {cliente.comprando ? "Sí" : "No"}
                   </Td>
-                  <Td py="3" px="6">
+                  <Td py="4" px="6">
                     <Button
                       bg="blue.500"
                       color="white"
@@ -262,7 +245,6 @@ export default function ClientesPage() {
                     >
                       Ver Detalles
                     </Button>
-                    {/* Agregar más acciones según sea necesario */}
                   </Td>
                 </Tr>
               ))}
