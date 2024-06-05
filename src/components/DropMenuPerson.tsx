@@ -54,6 +54,12 @@ export default function DropMenuPerson() {
           >
             Configuración
           </Link>
+          <Link
+            to="/Dashboard"
+            className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+          >
+            Dashboard
+          </Link>
           <button
             onClick={logout}
             className="block px-4 py-2 text-gray-800 hover:bg-gray-200 w-full text-center "

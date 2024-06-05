@@ -1,0 +1,49 @@
+{
+  "productos": [
+    {
+      "nombre": "Hoops Inti",
+      "precio": "24.90",
+      "stock": "10",
+      "material": "Cobre-otros",
+      "descripcion": "Estas argollas están enchapadas en oro y son una adición elegante a cualquier atuendo.",
+      "hipoalergenicas": true,
+      "producto": "Argollas Inti"
+    },
+    {
+      "nombre": "Hoops Julieta",
+      "precio": "24.90",
+      "stock": "2",
+      "material": "Cobre-otros",
+      "descripcion": "Estas argollas están enchapadas en rose gold y tienen un diseño delicado y femenino.",
+      "hipoalergenicas": true,
+      "producto": "Argollas Julieta"
+    },
+    {
+      "nombre": "Cielo",
+      "precio": "18.90",
+      "stock": "6",
+      "material": "Cobre-otros",
+      "descripcion": "Este collar llamado 'Cielo' está inspirado en la tranquilidad del cielo y es perfecto para uso diario.",
+      "hipoalergenicas": true,
+      "producto": "Cielo"
+    },
+    {
+      "nombre": "Hoops Adara",
+      "precio": "18.90",
+      "stock": "3",
+      "material": "Cobre-otros",
+      "descripcion": "Estas argollas están enchapadas en rose gold y tienen un diseño moderno y versátil.",
+      "hipoalergenicas": true,
+      "producto": "Hoops Adara"
+    },
+    {
+      "nombre": "Hoops Aisha",
+      "precio": "29.90",
+      "stock": "9",
+      "material": "Cobre-otros",
+      "descripcion": "Estas argollas están enchapadas en oro y tienen un diseño elegante y atemporal.",
+      "hipoalergenicas": true,
+      "producto": "Hoops Aisha"
+    }
+  ]
+}

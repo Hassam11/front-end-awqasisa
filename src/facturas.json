@@ -1,0 +1,47 @@
+[
+  {
+    "numero": "F001",
+    "cliente": {
+      "nombre": "Juan Pérez",
+      "correo": "juanperez@gmail.com"
+    },
+    "fechaEmision": "2024-06-01",
+    "total": 150.0
+  },
+  {
+    "numero": "F002",
+    "cliente": {
+      "nombre": "María García",
+      "correo": "mariagarcia@gmail.com"
+    },
+    "fechaEmision": "2024-06-02",
+    "total": 220.5
+  },
+  {
+    "numero": "F003",
+    "cliente": {
+      "nombre": "Carlos López",
+      "correo": "carloslopez@gmail.com"
+    },
+    "fechaEmision": "2024-06-03",
+    "total": 75.25
+  },
+  {
+    "numero": "F004",
+    "cliente": {
+      "nombre": "Ana Martínez",
+      "correo": "anamartinez@gmail.com"
+    },
+    "fechaEmision": "2024-06-04",
+    "total": 320.8
+  },
+  {
+    "numero": "F005",
+    "cliente": {
+      "nombre": "Laura Rodríguez",
+      "correo": "laurarodriguez@gmail.com"
+    },
+    "fechaEmision": "2024-06-05",
+    "total": 90.0
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "numero": "V001",
+    "cliente": "Cliente 1",
+    "fechaVenta": "2024-06-01",
+    "total": 150.0
+  },
+  {
+    "numero": "V002",
+    "cliente": "Cliente 2",
+    "fechaVenta": "2024-06-02",
+    "total": 220.5
+  },
+  {
+    "numero": "V003",
+    "cliente": "Cliente 3",
+    "fechaVenta": "2024-06-03",
+    "total": 75.25
+  },
+  {
+    "numero": "V004",
+    "cliente": "Cliente 4",
+    "fechaVenta": "2024-06-04",
+    "total": 320.8
+  },
+  {
+    "numero": "V005",
+    "cliente": "Cliente 5",
+    "fechaVenta": "2024-06-05",
+    "total": 90.0
+  }
+]

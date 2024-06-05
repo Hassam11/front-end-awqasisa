@@ -1,8 +1,10 @@
 import DATA from "../productos.json";
 import Navegation from "../components/Navegation";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
+  const hoops = DATA[0].Hoops;
   return (
     <>
       <Navegation />
@@ -77,58 +79,40 @@ export default function HomePage() {
           </nav>
 
           <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((_, index) => (
-              <div
+            {hoops.map((producto, index) => (
+              <Link
+                to={`/product/${index + 1}`}
                 key={index}
                 className="p-6 border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
               >
-                <img
-                  src={`https://via.placeholder.com/300x200?text=Product+${
-                    index + 1
-                  }`}
-                  alt={`Producto ${index + 1}`}
-                  className="w-full h-56 object-cover rounded-md"
-                />
-                <div className="mt-4">
-                  <h3 className="text-lg font-semibold text-gray-800">
-                    Producto {index + 1}
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-600">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Nulla optio saepe iste, libero cupiditate obcaecati! Sunt
-                    accusantium dolores nulla facere..
-                  </p>
-                  <div className="flex items-center mt-2">
-                    <p className="text-xl font-semibold text-gray-900">
-                      S./{(index + 1) * 10}.00
+                <div>
+                  <img
+                    src={`https://via.placeholder.com/300x200?text=Product+${
+                      index + 1
+                    }`}
+                    alt={`Producto ${index + 1}`}
+                    className="w-full h-56 object-cover rounded-md"
+                  />
+                  <div className="mt-4">
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      {producto.nombre}
+                    </h3>
+                    <p className="mt-1 text-sm text-gray-600">
+                      {producto.descripcion}
                     </p>
+                    <div className="flex items-center mt-2">
+                      <p className="text-xl font-semibold text-gray-900">
+                        S./{producto.precio}
+                      </p>
+                    </div>
+                    <button className="mt-4 w-full bg-orange-500 text-white text-center py-2 rounded-md hover:bg-orange-600 transition-colors duration-200">
+                      Añadir
+                    </button>
                   </div>
-                  <div className="flex items-center mt-2">
-                    <span className="text-yellow-400 mr-1">
-                      {Array(5)
-                        .fill(0)
-                        .map((_, i) => (
-                          <svg
-                            key={i}
-                            className="w-4 h-4 inline"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M12 .587l3.668 7.429 8.2 1.191-5.918 5.766 1.396 8.139L12 18.9l-7.346 3.912 1.396-8.139L.132 9.207l8.2-1.191z" />
-                          </svg>
-                        ))}
-                    </span>
-                    <span className="text-gray-600">(45)</span>
-                  </div>
-                  <button className="mt-4 w-full bg-orange-500 text-white text-center py-2 rounded-md hover:bg-orange-600 transition-colors duration-200">
-                    Añadir
-                  </button>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
-
           <div className="w-full flex justify-center mt-8">
             <nav
               className="relative z-0 inline-flex rounded-md shadow-sm"
