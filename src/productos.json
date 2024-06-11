@@ -3,10 +3,15 @@
     "Hoops": [
       {
         "nombre": "Hoops Inti",
-        "precio": "24.90",
-        "material": "Cobre-otros",
-        "descripcion": "enchapado en oro",
+        "precio": "60.28",
+        "material": "Cobre",
+        "descripcion": "¡Resalta tu estilo con las Argollas Inti! Estas elegantes argollas, enchapadas en oro y diseñadas con materiales hipoalergénicos, son la elección perfecta para un toque de sofisticación en tu look diario. Añádelas a tu colección de accesorios y deslumbra en cualquier ocasión.",
         "hipoalergenicas": "No irritan tu piel",
+        "ImgResource": "https://joyeriakass.com.pe/wp-content/uploads/2021/06/IMG_6751-scaled.jpg",
+        "img1": "https://www.carodijoyas.com/wp-content/uploads/2022/12/Argollas-de-Oro-v-3.jpg",
+        "img2": "https://petunia.com.pe/wp-content/uploads/2021/04/argolla-mini-oro.jpeg",
+        "img3": "https://imani.pe/wp-content/uploads/2020/11/Screen-Shot-2020-11-05-at-8.33.44-PM.jpg",
+        "img4": "https://laurella.co/wp-content/uploads/2022/11/web-laurella_0058__0001_laurella-oro-53.jpg",
         "product": "Argollas Inti"
       },
       {

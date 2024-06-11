@@ -1,3 +1,4 @@
+import { useState } from "react";
 import DATA from "../productos.json";
 import Navegation from "../components/Navegation";
 import Footer from "../components/Footer";
@@ -5,6 +6,12 @@ import { Link } from "react-router-dom";
 
 export default function HomePage() {
   const hoops = DATA[0].Hoops;
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredHoops = hoops.filter((producto) =>
+    producto.product.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <>
       <Navegation />
@@ -13,23 +20,11 @@ export default function HomePage() {
         style={{
           maxWidth: "1600px",
           height: "32rem",
-          // backgroundImage:
-          //   "url('https://images.unsplash.com/photo-1580757468214-c73f7062a5cb?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8MTYlM0E5fGVufDB8fDB8fHww')",
           backgroundColor: "gray",
         }}
       >
         <div className="container mx-auto">
-          <div className="flex flex-col w-full lg:w-1/2 justify-center items-start  px-6 tracking-wide">
-            {/* <h1 className="text-black text-2xl my-4">
-            Stripy Zig Zag Jigsaw Pillow and Duvet Set
-          </h1>
-          <a
-            className="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black"
-            href="#"
-          >
-            products
-          </a> */}
-          </div>
+          <div className="flex flex-col w-full lg:w-1/2 justify-center items-start  px-6 tracking-wide"></div>
         </div>
       </section>
 
@@ -45,57 +40,56 @@ export default function HomePage() {
               </a>
 
               <div className="flex items-center" id="store-nav-content">
-                <a
-                  className="pl-3 inline-block no-underline hover:text-black"
-                  href="#"
-                >
-                  <svg
-                    className="fill-current hover:text-black"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
+                <div className="flex items-center" id="store-nav-content">
+                  <input
+                    type="text"
+                    placeholder="Buscar productos..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-gray-500"
+                  />
+                  <a
+                    className="pl-3 inline-block no-underline hover:text-black"
+                    href="#"
                   >
-                    <path d="M7 11H17V13H7zM4 7H20V9H4zM10 15H14V17H10z" />
-                  </svg>
-                </a>
-
-                <a
-                  className="pl-3 inline-block no-underline hover:text-black"
-                  href="#"
-                >
-                  <svg
-                    className="fill-current hover:text-black"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z" />
-                  </svg>
-                </a>
+                    <svg
+                      className="fill-current hover:text-black"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z" />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </nav>
 
           <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {hoops.map((producto, index) => (
+            {filteredHoops.map((producto, index) => (
               <Link
-                to={`/product/${index + 1}`}
+                to={`/product/${index}`} // Restar 1 al índice aquí
                 key={index}
                 className="p-6 border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
               >
                 <div>
                   <img
-                    src={`https://via.placeholder.com/300x200?text=Product+${
-                      index + 1
-                    }`}
-                    alt={`Producto ${index + 1}`}
-                    className="w-full h-56 object-cover rounded-md"
+                    src={
+                      producto.ImgResource
+                        ? producto.ImgResource
+                        : `https://via.placeholder.com/300x200?text=Product+${
+                            index // Restar 1 al índice aquí también
+                          }`
+                    }
+                    alt={`Producto ${index}`} // Restar 1 al índice aquí también
+                    className="w-full h-80 object-cover rounded-md"
                   />
+
                   <div className="mt-4">
                     <h3 className="text-lg font-semibold text-gray-800">
-                      {producto.nombre}
+                      {producto.product}
                     </h3>
                     <p className="mt-1 text-sm text-gray-600">
                       {producto.descripcion}
@@ -106,7 +100,7 @@ export default function HomePage() {
                       </p>
                     </div>
                     <button className="mt-4 w-full bg-orange-500 text-white text-center py-2 rounded-md hover:bg-orange-600 transition-colors duration-200">
-                      Añadir
+                      Ver Producto
                     </button>
                   </div>
                 </div>

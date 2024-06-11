@@ -5,7 +5,7 @@ export default function DashboardNavigation() {
     <div className="w-64 bg-gray-800 text-white fixed h-screen overflow-y-auto">
       <div className="p-6">
         <h1 className="text-2xl font-semibold">Dashboard</h1>
-        <ul className="mt-6">
+        <ul className="mt-6 text-center">
           <li className="mb-4">
             <Link
               to="/Dashboard/ventas"
