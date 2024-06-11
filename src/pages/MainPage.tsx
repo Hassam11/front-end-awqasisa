@@ -1,4 +1,3 @@
-import React from "react";
 import DATA from "../productos.json";
 import Navegation from "../components/Navegation";
 

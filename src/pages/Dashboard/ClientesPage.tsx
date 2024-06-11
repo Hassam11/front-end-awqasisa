@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import {
   Flex,
   Table,
@@ -15,7 +15,7 @@ import DashboardNavigation from "../../components/DashboardNavigation";
 
 export default function ClientesPage() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [clientes, setClientes] = useState([
+  const [clientes] = useState([
     {
       id: 1,
       nombre: "Juan Pérez",
@@ -148,7 +148,7 @@ export default function ClientesPage() {
     },
   ]);
 
-  const handleSearch = (event) => {
+  const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
   };
 

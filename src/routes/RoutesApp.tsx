@@ -5,7 +5,6 @@ import HomePage from "../pages/HomePage";
 import About from "../pages/AboutPage";
 import CartShop from "../components/CartShop";
 import CheckoutPage from "../pages/CheckoutPage";
-import MainPage from "../pages/MainPage";
 import PerfilPage from "../pages/PerfilPage";
 import ProductDetail from "../pages/ProductDetail";
 import DashboardPage from "../pages/DashboardPage";
@@ -50,13 +49,6 @@ export const routerApp = createBrowserRouter([
   {
     path: "/Dashboard",
     element: <DashboardPage />,
-    //children: [
-    //{
-    //path: "clientes",
-    //element: <ClientesPage />,
-    //loader: teamLoader,
-    //},
-    //],
   },
   {
     path: "/Dashboard/clientes",

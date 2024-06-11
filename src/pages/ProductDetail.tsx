@@ -6,7 +6,9 @@ import { IoArrowBack } from "react-icons/io5";
 
 export default function ProductDetail() {
   const { productId } = useParams();
-  const product = DATA[0].Hoops[productId];
+  const id = productId || "defaultProductId";
+  const product = DATA[0].Hoops[parseInt(id)];
+
   const [cantidad, setCantidad] = useState(1);
 
   if (!product) {

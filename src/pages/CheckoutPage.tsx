@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaCcVisa, FaCcAmex, FaCcMastercard, FaCcPaypal } from "react-icons/fa";
 import Navegation from "../components/Navegation";
 import DATA from "../productos.json";
 import { Link } from "react-router-dom";
+import { Input } from "@chakra-ui/react";
 
 export default function CheckoutPage() {
   const hoops = DATA[0].Hoops[0];
@@ -17,11 +18,12 @@ export default function CheckoutPage() {
 
           <div className="mb-4">
             <label className="block text-base font-medium text-gray-700 mb-2">
-              Dirección de facturación
+              Dirección de Envio
             </label>
-            <select className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-base">
-              <option>Lima</option>
-            </select>
+            <Input
+              placeholder="Ingrese dirección precisa Ejem: Calle - Av - Distrito"
+              type="text"
+            />
           </div>
 
           <div className="mb-6">

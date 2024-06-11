@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Button,
@@ -18,11 +18,11 @@ export default function FacturasPage() {
   const [fechaInicio, setFechaInicio] = useState("");
   const [fechaFin, setFechaFin] = useState("");
 
-  const handleFechaInicioChange = (e) => {
+  const handleFechaInicioChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFechaInicio(e.target.value);
   };
 
-  const handleFechaFinChange = (e) => {
+  const handleFechaFinChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFechaFin(e.target.value);
   };
 

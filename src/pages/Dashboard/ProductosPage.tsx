@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import DATA from "../../productos2.json";
 import DashboardNavigation from "../../components/DashboardNavigation";
 import { FaTable, FaThLarge } from "react-icons/fa";
@@ -12,18 +11,33 @@ import {
   ModalBody,
   ModalCloseButton,
   Button,
+  Input,
 } from "@chakra-ui/react";
 
-export default function ProductosPage() {
-  const [viewMode, setViewMode] = useState("grid");
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const data = DATA.productos;
+interface Producto {
+  nombre: string;
+  descripcion: string;
+  precio: number;
+  stock: number;
+  imagen: string; // Agregar la propiedad imagen al tipo Producto
+}
 
-  const toggleViewMode = (mode) => {
+export default function ProductosPage() {
+  const [viewMode, setViewMode] = useState<"grid" | "table">("grid");
+  const [selectedProduct, setSelectedProduct] = useState<Producto | null>(null);
+  const data: Producto[] = DATA.productos.map((producto) => ({
+    nombre: producto.nombre,
+    descripcion: producto.descripcion,
+    precio: parseFloat(producto.precio), // Convertir de string a number
+    stock: parseInt(producto.stock),
+    imagen: "https://baliq.com/wp-content/uploads/2021/12/ARG-5510.jpg", // Agregar la URL de la imagen
+  }));
+
+  const toggleViewMode = (mode: "grid" | "table") => {
     setViewMode(mode);
   };
 
-  const handleEdit = (producto) => {
+  const handleEdit = (producto: Producto) => {
     setSelectedProduct(producto);
   };
 
@@ -64,6 +78,11 @@ export default function ProductosPage() {
                   key={producto.nombre}
                   className="bg-white rounded-lg shadow-md p-6"
                 >
+                  <img
+                    src={producto.imagen}
+                    alt={producto.nombre}
+                    className="mx-auto mb-4 w-40 h-40 object-contain"
+                  />
                   <h2 className="text-xl font-semibold mb-4">
                     {producto.nombre}
                   </h2>
@@ -90,9 +109,11 @@ export default function ProductosPage() {
                 <thead>
                   <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
                     <th className="py-3 px-6 text-left">Nombre</th>
+                    <th className="py-3 px-6 text-left">Producto</th>{" "}
                     <th className="py-3 px-6 text-left">Descripción</th>
                     <th className="py-3 px-6 text-left">Precio</th>
                     <th className="py-3 px-6 text-left">Stock</th>
+                    {/* Nueva columna para la imagen */}
                     <th className="py-3 px-6 text-left">Acciones</th>
                   </tr>
                 </thead>
@@ -104,10 +125,18 @@ export default function ProductosPage() {
                     >
                       <td className="py-3 px-6 text-left">{producto.nombre}</td>
                       <td className="py-3 px-6 text-left">
+                        <img
+                          src={producto.imagen}
+                          alt={producto.nombre}
+                          className="w-20 h-20 object-contain"
+                        />
+                      </td>
+                      <td className="py-3 px-6 text-left">
                         {producto.descripcion}
                       </td>
                       <td className="py-3 px-6 text-left">{producto.precio}</td>
                       <td className="py-3 px-6 text-left">{producto.stock}</td>
+
                       <td className="py-3 px-6 text-left">
                         <Button
                           colorScheme="blue"
@@ -135,9 +164,37 @@ export default function ProductosPage() {
               <ModalHeader>{selectedProduct?.nombre}</ModalHeader>
               <ModalCloseButton />
               <ModalBody>
-                <p>{selectedProduct?.descripcion}</p>
-                <p>Precio: {selectedProduct?.precio}</p>
-                <p>Stock: {selectedProduct?.stock}</p>
+                <img
+                  src={selectedProduct?.imagen}
+                  alt={selectedProduct?.nombre}
+                  className="mx-auto mb-4 w-40 h-40 object-contain"
+                />
+                <div>
+                  <label htmlFor="descripcion">Descripción:</label>
+                  <Input
+                    id="descripcion"
+                    value={selectedProduct?.descripcion}
+                    className="block w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:border-blue-500"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="precio">Precio:</label>
+                  <Input
+                    id="precio"
+                    type="number"
+                    value={selectedProduct?.precio}
+                    className="block w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:border-blue-500"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="stock">Stock:</label>
+                  <Input
+                    id="stock"
+                    type="number"
+                    value={selectedProduct?.stock}
+                    className="block w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:border-blue-500"
+                  />
+                </div>
               </ModalBody>
               <ModalFooter>
                 <Button colorScheme="blue" mr={3} onClick={handleCloseModal}>

@@ -1,14 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { FaPlus } from "react-icons/fa";
 import {
-  Button,
-  Flex,
   Text,
   Stat,
   StatLabel,
   StatNumber,
-  StatHelpText,
   StatGroup,
   Box,
   Grid,
@@ -20,7 +15,7 @@ import DashboardNavigation from "../../components/DashboardNavigation";
 import "chart.js/auto";
 
 export default function VentasPage() {
-  const [ventas, setVentas] = useState(ventasData);
+  const [ventas] = useState(ventasData);
 
   // Función para calcular el total de ventas
   const calcularTotalVentas = () => {
