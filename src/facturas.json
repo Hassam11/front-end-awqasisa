@@ -3,45 +3,110 @@
     "numero": "F001",
     "cliente": {
       "nombre": "Juan Pérez",
-      "correo": "juanperez@gmail.com"
+      "correo": "juanperez@gmail.com",
+      "ruc": "98761234",
+      "direccion": "Av. Siempre Viva 123, Lima"
     },
-    "fechaEmision": "2024-06-01",
-    "total": 150.0
+    "fechaEmision": "2024-06-02T10:00:50",
+    "total": 150.0,
+    "estado": "Pagada",
+    "metodoPago": "Tarjeta de Crédito",
+    "fechaPago": "2024-06-02T10:00:10",
+    "productos": [
+      {
+        "nombre": "Producto 1",
+        "cantidad": 2
+      },
+      {
+        "nombre": "Producto 2",
+        "cantidad": 1
+      }
+    ]
   },
   {
     "numero": "F002",
     "cliente": {
       "nombre": "María García",
-      "correo": "mariagarcia@gmail.com"
+      "correo": "mariagarcia@gmail.com",
+      "ruc": "20123456790",
+      "direccion": "Jr. Los Sauces 456, Lima"
     },
-    "fechaEmision": "2024-06-02",
-    "total": 220.5
+    "fechaEmision": "2024-06-02T11:00:00",
+    "total": 220.5,
+    "estado": "Pagada",
+    "metodoPago": "Tarjeta de Débito",
+    "fechaPago": "2024-06-02T11:00:10",
+    "vendedor": "Luis Fernández",
+    "productos": [
+      {
+        "nombre": "Producto 1",
+        "cantidad": 1
+      }
+    ]
   },
   {
     "numero": "F003",
     "cliente": {
       "nombre": "Carlos López",
-      "correo": "carloslopez@gmail.com"
+      "correo": "carloslopez@gmail.com",
+      "ruc": "92882828",
+      "direccion": "Calle Las Flores 789, Lima"
     },
-    "fechaEmision": "2024-06-03",
-    "total": 75.25
+    "fechaEmision": "2024-06-03T12:00:00",
+    "total": 75.25,
+    "estado": "Pagada",
+    "metodoPago": "Transferencia Bancaria",
+    "fechaPago": "2024-06-03T12:00:10",
+    "vendedor": "Ana Torres",
+    "productos": [
+      {
+        "nombre": "Producto 1",
+        "cantidad": 3
+      }
+    ]
   },
   {
     "numero": "F004",
     "cliente": {
       "nombre": "Ana Martínez",
-      "correo": "anamartinez@gmail.com"
+      "correo": "anamartinez@gmail.com",
+      "ruc": "20123456792",
+      "direccion": "Av. Los Rosales 321, Lima"
     },
-    "fechaEmision": "2024-06-04",
-    "total": 320.8
+    "fechaEmision": "2024-06-04T13:00:00",
+    "total": 320.8,
+    "estado": "Pagada",
+    "metodoPago": "Tarjeta de Débito",
+    "fechaPago": "2024-06-04T13:00:10",
+    "productos": [
+      {
+        "nombre": "Producto 1",
+        "cantidad": 1
+      },
+      {
+        "nombre": "Producto 2",
+        "cantidad": 2
+      }
+    ]
   },
   {
     "numero": "F005",
     "cliente": {
       "nombre": "Laura Rodríguez",
-      "correo": "laurarodriguez@gmail.com"
+      "correo": "laurarodriguez@gmail.com",
+      "ruc": "20123456793",
+      "direccion": "Jr. Las Magnolias 654, Lima"
     },
-    "fechaEmision": "2024-06-05",
-    "total": 90.0
+    "fechaEmision": "2024-06-05T14:00:00",
+    "total": 90.0,
+    "estado": "Pagada",
+    "metodoPago": "Tarjeta de Crédito",
+    "fechaPago": "2024-06-05T14:00:10",
+    "productos": [
+      {
+        "nombre": "Producto 1",
+        "cantidad": 1
+      }
+    ]
   }
 ]

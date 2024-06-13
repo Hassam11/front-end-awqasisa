@@ -52,7 +52,7 @@ export default function ProductosPage() {
       {/* Content Area */}
       <div className="flex-1 p-10 ml-64">
         <div className="container mx-auto p-6">
-          <h1 className="text-3xl font-semibold mb-8">Gestión de Productos</h1>
+          <h1 className="text-3xl font-semibold mb-8">Productos</h1>
           <div className="flex justify-end mb-4">
             <button
               onClick={() => toggleViewMode("grid")}
