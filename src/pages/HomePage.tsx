@@ -79,7 +79,7 @@ export default function HomePage() {
                     src={
                       producto.ImgResource
                         ? producto.ImgResource
-                        : `https://via.placeholder.com/300x200?text=Product+${
+                        : `https://via.placeholder.com/300x200?text=Producto+${
                             index // Restar 1 al índice aquí también
                           }`
                     }
