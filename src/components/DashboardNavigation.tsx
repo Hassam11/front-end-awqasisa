@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { FaStore, FaHome, FaNewspaper, FaChartBar } from "react-icons/fa";
 import { IoPerson } from "react-icons/io5";
 import { MdExitToApp } from "react-icons/md";
+import { RiAdminFill } from "react-icons/ri";
 
 export default function DashboardNavigation() {
   return (
@@ -43,6 +44,15 @@ export default function DashboardNavigation() {
             >
               <IoPerson className="mr-2" />
               Clientes
+            </Link>
+          </li>
+          <li className="mb-4">
+            <Link
+              to="/Dashboard/administradores"
+              className="flex items-center text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded"
+            >
+              <RiAdminFill className="mr-2" />
+              Administradores
             </Link>
           </li>
           <li className="mb-4">

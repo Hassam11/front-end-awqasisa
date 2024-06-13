@@ -86,6 +86,12 @@ export default function FacturasPage() {
     setSelectedFactura(factura);
     onOpen();
   };
+  const formatCurrency = (value: number) => {
+    return new Intl.NumberFormat("es-PE", {
+      style: "currency",
+      currency: "PEN",
+    }).format(value);
+  };
 
   const formatearFecha = (fecha: string) => {
     const opciones = {
@@ -146,10 +152,11 @@ export default function FacturasPage() {
                   <Td>{factura.cliente.nombre}</Td>
                   <Td>{factura.cliente.correo}</Td>
                   <Td>{formatearFecha(factura.fechaEmision)}</Td>
-                  <Td>S/. {factura.total}</Td>
+                  <Td>{formatCurrency(factura.total)}</Td>
                   <Td>
                     <Flex>
                       <Button
+                        colorScheme="blue"
                         onClick={() => verDetalles(factura)}
                         className="bg-blue-500 text-white px-4 py-2 rounded mr-2 hover:bg-blue-600 transition duration-300 ease-in-out"
                       >
@@ -179,45 +186,45 @@ export default function FacturasPage() {
                   <Box>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <Text fontWeight="bold">Número de Factura:</Text>
+                        <Text fontWeight="semibold">Número de Factura:</Text>
                         <Text>{selectedFactura.numero}</Text>
                       </div>
                       <div>
-                        <Text fontWeight="bold">Cliente:</Text>
+                        <Text fontWeight="semibold">Cliente:</Text>
                         <Text>{selectedFactura.cliente.nombre}</Text>
                       </div>
                       <div>
-                        <Text fontWeight="bold">Correo:</Text>
+                        <Text fontWeight="semibold">Correo:</Text>
                         <Text>{selectedFactura.cliente.correo}</Text>
                       </div>
                       <div>
-                        <Text fontWeight="bold">RUC o DNI:</Text>
+                        <Text fontWeight="semibold">RUC o DNI:</Text>
                         <Text>{selectedFactura.cliente.ruc}</Text>
                       </div>
                       <div>
-                        <Text fontWeight="bold">Dirección:</Text>
+                        <Text fontWeight="semibold">Dirección:</Text>
                         <Text>{selectedFactura.cliente.direccion}</Text>
                       </div>
                       <div>
-                        <Text fontWeight="bold">Fecha de Pago:</Text>
+                        <Text fontWeight="semibold">Fecha de Pago:</Text>
                         <Text>{formatearFecha(selectedFactura.fechaPago)}</Text>
                       </div>
                       <div>
-                        <Text fontWeight="bold">Fecha de Emisión:</Text>
+                        <Text fontWeight="semibold">Fecha de Emisión:</Text>
                         <Text>
                           {formatearFecha(selectedFactura.fechaEmision)}
                         </Text>
                       </div>
                       <div>
-                        <Text fontWeight="bold">Total:</Text>
-                        <Text>S/. {selectedFactura.total}</Text>
+                        <Text fontWeight="semibold">Total:</Text>
+                        <Text>{formatCurrency(selectedFactura.total)}</Text>
                       </div>
                       <div>
-                        <Text fontWeight="bold">Estado:</Text>
+                        <Text fontWeight="semibold">Estado:</Text>
                         <Text>{selectedFactura.estado}</Text>
                       </div>
                       <div>
-                        <Text fontWeight="bold">Método de Pago:</Text>
+                        <Text fontWeight="semibold">Método de Pago:</Text>
                         <Text>{selectedFactura.metodoPago}</Text>
                       </div>
                     </div>

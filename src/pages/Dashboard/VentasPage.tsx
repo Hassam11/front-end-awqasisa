@@ -8,6 +8,8 @@ import {
   Box,
   Grid,
   GridItem,
+  UnorderedList,
+  ListItem,
 } from "@chakra-ui/react";
 import { Line } from "react-chartjs-2";
 import ventasData from "../../ventas.json";
@@ -73,38 +75,44 @@ export default function VentasPage() {
           {/* Estadísticas de ventas */}
           <StatGroup gap={10}>
             <Stat
-              boxShadow="xs"
+              boxShadow="base"
               p="6"
               rounded="md"
-              border="1px"
+              borderWidth="1px"
               borderColor="gray.200"
             >
-              <StatLabel>Ventas Totales</StatLabel>
-              <StatNumber>S/ {calcularTotalVentas()}</StatNumber>
+              <StatLabel>Ganancias Totales</StatLabel>
+              <StatNumber fontSize="xl">
+                S/ {calcularTotalVentas().toFixed(2)}
+              </StatNumber>
             </Stat>
             <Stat
-              boxShadow="xs"
+              boxShadow="base"
               p="6"
               rounded="md"
-              border="1px"
+              borderWidth="1px"
               borderColor="gray.200"
             >
               <StatLabel>Ganancias del Mes</StatLabel>
-              <StatNumber>S/ {calcularGananciasMes()}</StatNumber>
+              <StatNumber fontSize="xl">
+                S/ {calcularGananciasMes().toFixed(2)}
+              </StatNumber>
             </Stat>
             <Stat
-              boxShadow="xs"
+              boxShadow="base"
               p="6"
               rounded="md"
-              border="1px"
+              borderWidth="1px"
               borderColor="gray.200"
             >
-              <StatLabel>Cambio de Clientes</StatLabel>
-              <StatNumber>{calcularCambioClientes()} 2</StatNumber>
+              <StatLabel>Clientes</StatLabel>
+              <StatNumber fontSize="xl">
+                {calcularCambioClientes()} 2
+              </StatNumber>
             </Stat>
           </StatGroup>
         </div>
-        <Grid templateColumns="repeat(3, 1fr)" gap={6} p={6}>
+        <Grid templateColumns="repeat(3, 1fr)" gap={6} p={6} mx="20px">
           <GridItem colSpan={2}>
             <Box
               boxShadow="xs"
@@ -118,23 +126,29 @@ export default function VentasPage() {
           </GridItem>
           <GridItem colSpan={1}>
             <Box
-              boxShadow="xs"
+              boxShadow="base" // Sombra más suave
               p="6"
               rounded="md"
-              border="1px"
+              borderWidth="1px"
               borderColor="gray.200"
+              bg="white"
             >
               <Text fontSize="xl" fontWeight="bold" mb={4}>
                 Análisis de Clientes
               </Text>
-              <Text>Clientes Nuevos: 50</Text>
-              <Text>Clientes Recurrentes: 17</Text>
+              <Text fontSize="lg">Clientes: 50</Text>
+              <Text fontSize="lg">Clientes Recurrentes: 17</Text>
+
               <Text fontSize="xl" fontWeight="bold" mb={4} mt={6}>
                 Productos Más Vendidos
               </Text>
-              <Text>1. Hoops Aisha - 30 unidades</Text>
-              <Text>2. Argollas Julieta- 18 unidades</Text>
-              <Text>3. Argollas Inti - 13 unidades</Text>
+              <UnorderedList pl="0" mb="4">
+                <ListItem fontSize="lg">Hoops Aisha - 30 unidades</ListItem>
+                <ListItem fontSize="lg">
+                  Argollas Julieta - 18 unidades
+                </ListItem>
+                <ListItem fontSize="lg">Argollas Inti - 13 unidades</ListItem>
+              </UnorderedList>
             </Box>
           </GridItem>
         </Grid>

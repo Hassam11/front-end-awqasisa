@@ -1,6 +1,6 @@
 [
   {
-    "numero": "F001",
+    "numero": "F00001",
     "cliente": {
       "nombre": "Juan Pérez",
       "correo": "juanperez@gmail.com",
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "numero": "F002",
+    "numero": "F00002",
     "cliente": {
       "nombre": "María García",
       "correo": "mariagarcia@gmail.com",
@@ -45,7 +45,7 @@
     ]
   },
   {
-    "numero": "F003",
+    "numero": "F00003",
     "cliente": {
       "nombre": "Carlos López",
       "correo": "carloslopez@gmail.com",
@@ -66,7 +66,7 @@
     ]
   },
   {
-    "numero": "F004",
+    "numero": "F00004",
     "cliente": {
       "nombre": "Ana Martínez",
       "correo": "anamartinez@gmail.com",
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "numero": "F005",
+    "numero": "F00005",
     "cliente": {
       "nombre": "Laura Rodríguez",
       "correo": "laurarodriguez@gmail.com",

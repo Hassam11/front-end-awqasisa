@@ -55,7 +55,7 @@ export default function DropMenuPerson() {
             Configuración
           </Link>
           <Link
-            to="/Dashboard"
+            to="/Dashboard/ventas"
             className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
           >
             Dashboard

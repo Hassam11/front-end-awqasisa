@@ -12,6 +12,7 @@ import ClientesPage from "../pages/Dashboard/ClientesPage";
 import ProductosPage from "../pages/Dashboard/ProductosPage";
 import FacturasPage from "../pages/Dashboard/FacturasPage";
 import VentasPage from "../pages/Dashboard/VentasPage";
+import AdministradoresPage from "../pages/Dashboard/AdminsPages";
 
 export const routerApp = createBrowserRouter([
   {
@@ -65,5 +66,9 @@ export const routerApp = createBrowserRouter([
   {
     path: "/Dashboard/ventas",
     element: <VentasPage />,
+  },
+  {
+    path: "/Dashboard/administradores",
+    element: <AdministradoresPage />,
   },
 ]);

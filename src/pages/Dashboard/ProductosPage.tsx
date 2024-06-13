@@ -87,10 +87,12 @@ export default function ProductosPage() {
                     {producto.nombre}
                   </h2>
                   <p className="text-gray-600 mb-2">{producto.descripcion}</p>
-                  <p className="text-gray-600 mb-2">
-                    Precio: {producto.precio}
+                  <p className="text-gray-800 font-semibold text-lg mb-2">
+                    Precio: S/. {producto.precio.toFixed(2)}
                   </p>
-                  <p className="text-gray-600 mb-2">Stock: {producto.stock}</p>
+                  <p className="text-gray-800 font-semibold text-lg mb-2">
+                    Stock: {producto.stock}
+                  </p>
                   <div className="flex justify-between">
                     <Button
                       colorScheme="blue"
@@ -123,7 +125,9 @@ export default function ProductosPage() {
                       key={producto.nombre}
                       className="border-b border-gray-200 hover:bg-gray-100"
                     >
-                      <td className="py-3 px-6 text-left">{producto.nombre}</td>
+                      <td className="py-3 px-6 text-left font-semibold text-sm">
+                        {producto.nombre}
+                      </td>
                       <td className="py-3 px-6 text-left">
                         <img
                           src={producto.imagen}
@@ -131,11 +135,15 @@ export default function ProductosPage() {
                           className="w-20 h-20 object-contain"
                         />
                       </td>
-                      <td className="py-3 px-6 text-left">
+                      <td className="py-3 px-6 text-left  font-semibold">
                         {producto.descripcion}
                       </td>
-                      <td className="py-3 px-6 text-left">{producto.precio}</td>
-                      <td className="py-3 px-6 text-left">{producto.stock}</td>
+                      <td className="py-3 px-6 text-left  font-semibold">
+                        S/. {producto.precio}
+                      </td>
+                      <td className="py-3 px-6 text-left  font-semibold">
+                        {producto.stock}
+                      </td>
 
                       <td className="py-3 px-6 text-left">
                         <Button

@@ -1,0 +1,32 @@
+[
+  {
+    "nombres": "Betzabeth",
+    "apellidos": "Olivares Jara",
+    "correo": "OlivaresJara@example.com",
+    "celular": "+51 987 654 321",
+    "fecha_de_cumpleaños": "01/01/1980",
+    "imrAvatar": "https://ttwo.dk/wp-content/uploads/2017/08/person-placeholder.jpg",
+    "ultima_entrada_al_sistema": "hace 2 horas",
+    "rol": "Administrador"
+  },
+  {
+    "nombres": "María",
+    "apellidos": "López",
+    "correo": "maria.lopez@example.com",
+    "celular": "+51 945 678 123",
+    "fecha_de_cumpleaños": "15/05/1990",
+    "imrAvatar": "https://ttwo.dk/wp-content/uploads/2017/08/person-placeholder.jpg",
+    "ultima_entrada_al_sistema": "hace 1 hora",
+    "rol": "Empleado"
+  },
+  {
+    "nombres": "Pedro",
+    "apellidos": "Ramírez",
+    "correo": "pedro.ramirez@example.com",
+    "celular": "+51 910 123 456",
+    "fecha_de_cumpleaños": "10/11/1985",
+    "imrAvatar": "https://ttwo.dk/wp-content/uploads/2017/08/person-placeholder.jpg",
+    "ultima_entrada_al_sistema": "hace 3 horas",
+    "rol": "Empleado"
+  }
+]
