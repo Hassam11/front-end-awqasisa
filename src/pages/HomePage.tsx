@@ -36,7 +36,7 @@ export default function HomePage() {
                 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl"
                 href="#"
               >
-                Tienda
+                Productos
               </a>
 
               <div className="flex items-center" id="store-nav-content">
